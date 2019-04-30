@@ -196,6 +196,7 @@ input, select, textarea {
 			width: max-content;
 			padding-bottom: 0.5rem;
 			margin: 0 0 2rem 0;
+			color: #f4b643;
 		}
 
 	h1 {
@@ -1305,7 +1306,10 @@ input, select, textarea {
 				#header .content .inner > :last-child {
 					margin-bottom: 0;
 				}
-
+			#header .content h1 {
+				text-transform: none;
+				color: #f4b643;
+			}
 			#header .content p {
 				text-transform: none;
 				letter-spacing: 0.2rem;
