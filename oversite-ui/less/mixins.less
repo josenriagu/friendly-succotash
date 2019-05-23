@@ -1,0 +1,52 @@
+// component margins
+.componentMargin() {
+    max-width: 1060px;
+    width    : 100%;
+    margin   : 0 auto;
+
+    @media @tablet {
+        max-width: 600px;
+    }
+
+    @media @tabletmini {
+        max-width: 500px;
+    }
+
+    @media @mobile {
+        max-width: 390px;
+    }
+}
+// flex display
+.flexdisplay(@Direction) {
+    display       : flex;
+    flex-direction: @Direction;
+}
+// header styles
+.hstyles(@fontsize, @paddingbottom, @fontweight) {
+    font-size     : @fontsize;
+    padding-bottom: @paddingbottom;
+    font-weight   : @fontweight;
+}
+// paragraph styles
+.pStyles(@lineheight, @fontsize, @fontweight) {
+    line-height: @lineheight;
+    font-size  : @fontsize;
+    font-weight: @fontweight;
+}
+// link styles
+.astyles(@paddingleft) {
+    color          : @font-color;
+    text-decoration: none;
+    padding-left   : @paddingleft;
+}
+// overlay style
+.overlay(@opacity, @top, @right, @bottom) {
+    background-color: fadeout(@shark, 60%);
+    position: fixed;
+    z-index: 999;
+    top:@top;
+    right:@right;
+    bottom:@bottom;
+    height:100%;
+    width:100%;
+}
