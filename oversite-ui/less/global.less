@@ -120,7 +120,7 @@ h4 {
     }
 }
 
-// define paragrapg style
+// define paragraph style
 p {
     .pStyles(1.5, 1.6rem, 500);
     padding-bottom: 10px;
@@ -155,16 +155,7 @@ a {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #eef2f3, @silver);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-// define fixed header style
-.fixed-header {
-    .componentMargin();
-    background-color: red;
-    position        : fixed;
-    top             : 0;
-    // left         : 4rem;
-    right           : 4rem;
+    padding-bottom: 2rem;
 }
 
 // define button 1 style
@@ -178,7 +169,7 @@ a {
     &:hover {
         cursor          : pointer;
         background-color: darken(@button-bg, 15%);
-        color           : @gold;
+        color           : @main-bg;
     }
 }
 
@@ -218,17 +209,21 @@ a {
 
 // define hidden class style
 .mobile-hidden {
-    @media @mobile, @tablet, @tabletmini {
+
+    @media @mobile,
+    @tablet,
+    @tabletmini {
         display: none;
     }
 }
 
+// define fixed header styles
 .scroll-a {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
+    position        : fixed;
+    left            : 0;
+    right           : 0;
+    top             : 0;
     background-color: @header-bg;
-    padding: 2rem 0rem;
-    transition: .2s ease-in-out;
+    padding         : 2rem 0rem;
+    transition      : .2s ease-in-out;
 }

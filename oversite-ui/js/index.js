@@ -100,11 +100,13 @@ doTeamBuild();
 
 // Set click to scroll events on anchor tags
 anchor_tag.map((anchor, index) => {
-    anchor.addEventListener('click', (event) => {
-        event.preventDefault();
-        const navscroll = [0, 450, 895, 1500, 2620, 0, 640, 1565, 2785, 5635];
-        window.scrollTo(0, navscroll[index])
-    })
+    if (anchor[index] != 4 || anchor[index] != 9) {
+        anchor.addEventListener('click', (event) => {
+            event.preventDefault();
+            const navscroll = [0, 450, 895, 1500, 0, 640, 1565, 2785];
+            window.scrollTo(0, navscroll[index])
+        })
+    }
 })
 
 // Show scroll to top button when scroll to 30px
@@ -112,18 +114,16 @@ window.addEventListener('scroll', () => scroll());
 
 // Define scroll behaviour
 const scroll = () => {
-  if (window.scrollY > 400 || document.documentElement.scrollY > 400) {
-    scroll_top.style.display = 'block';
-    header_wrapper.classList.add('scroll-a');
-    header_top.style.padding = '0rem';
-    // header_bottom.classList.add('scroll-b');
-  } else {
-    scroll_top.style.display = 'none';
-    header_wrapper.classList.remove('scroll-a');
-    header_top.style.paddingTop = '6rem';
-    header_top.style.paddingBottom = '4rem';
-    // header_bottom.classList.remove('scroll-b');
-  }
+    if (window.scrollY > 400 || document.documentElement.scrollY > 400) {
+        scroll_top.style.display = 'block';
+        header_wrapper.classList.add('scroll-a');
+        header_top.style.padding = '0rem';
+    } else {
+        scroll_top.style.display = 'none';
+        header_wrapper.classList.remove('scroll-a');
+        header_top.style.paddingTop = '6rem';
+        header_top.style.paddingBottom = '4rem';
+    }
 }
 
 // Add click event listener and scroll to top when clicked
@@ -131,12 +131,11 @@ scroll_top.addEventListener('click', () => window.scrollTo(0, 0))
 
 
 // Add click event listener to menu button
-menu_btn.addEventListener ('click', () => {
+menu_btn.addEventListener('click', () => {
     menu.style.display = 'block';
-    // TweenMax.to(menu, .5, { display: 'block', right: -600 });
 })
 
 // Add click event listener to overlay
-overlay.addEventListener ('click', () => {
-    menu.style.display ='none';
+overlay.addEventListener('click', () => {
+    menu.style.display = 'none';
 });

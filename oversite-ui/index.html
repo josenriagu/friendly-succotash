@@ -29,9 +29,9 @@
                         <a href="#">Features</a>
                         <a href="#">How it Works</a>
                         <a href="#">Team</a>
-                        <a href="#">Contact</a>
+                        <a href="contact.html">Contact</a>
                     </nav>
-                    <div class="btn-1 mobile-hidden"><a href="#">Login/Register</a></div>
+                    <a href="#" class="btn-1 mobile-hidden">Login/Register</a>
                     <i class="fas fa-bars fa-3x"></i>
                 </div>
             </div>
@@ -44,9 +44,9 @@
                             <a href="#">Features</a>
                             <a href="#">How it Works</a>
                             <a href="#">Team</a>
-                            <a href="#">Contact</a>
+                            <a href="contact.html">Contact</a>
                         </nav>
-                        <div class="btn-1 nav-btn"><a href="#">Login/Register</a></div>
+                        <div onclick="window.location.href = '#'" class="btn-1 btn">Login/Register</div>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
         <!-- bottom header -->
         <div class="header-bottom container">
             <div class="mockup">
-                <img src="img/mockup-1.png" alt="desktop-mockup">
+                <img src="/img/mockup-1.png" alt="desktop-mockup">
             </div>
             <div class="intro-text">
                 <h2>OverSite allows correctional facilities to broadcast, manage and post their skilled inmates to
@@ -62,8 +62,8 @@
                 <p>Give your inmates a second chance. Help them gain work experience and earn income while in prison, so
                     upon release, they can be rehabilitated...the right way</p>
                 <div class="buttons">
-                    <div class="btn-1"><a href="https://play.google.com/store/apps">Download App</a></div>
-                    <div class="btn-2 mobile-hidden"><a href="https://www.youtube.com">View Demo</a></div>
+                    <a href="https://play.google.com/store/apps" class="btn-1">Download App</a>
+                    <a href="https://www.youtube.com" class="btn-2 mobile-hidden">View Demo</a>
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="mid-mockup">
-                    <img src="img/mockup-1.png" alt="desktop-mockup">
+                    <img src="/img/mockup-1.png" alt="desktop-mockup">
                 </div>
                 <div class="story-box">
                     <div class="story story-1">
@@ -126,33 +126,11 @@
                 <!-- team members will appear here -->
             </div>
         </section>
-        <!-- contact section -->
-        <section class="container alt-color" id="contact">
-            <div class="section-title">
-                <h1>Contact</h1>
+        <!-- CTA button -->
+        <section class="container alt-color" id="cta">
+            <div onclick="window.location.href = '#'" class="cta-btn">
+                <h3>Go to App Page</h3>
             </div>
-            <form method="post" action="#">
-                <div class="fields">
-                    <div class="field half">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" required="true" placeholder="Enter your name" />
-                    </div>
-                    <div class="field half">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" required="true" placeholder="Enter your email" />
-                    </div>
-                    <div class="field full">
-                        <label for="subject">Subject</label>
-                        <input type="text" name="subject" id="subject" placeholder="Enter a subject">
-                    </div>
-                    <div class="field full">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" rows="7" required="true"
-                            placeholder="Write a message"></textarea>
-                    </div>
-                </div>
-                <input type="submit" value="Send Message" class="btn-3" />
-            </form>
         </section>
     </main>
     <!-- end main -->
@@ -185,10 +163,14 @@
         </div>
     </footer>
     <!-- end footer -->
+
+    <!-- floating control elements -->
+    <!-- <div class="scroll-down far fa-arrow-alt-circle-down"></div> -->
     <div class="scroll-top fas fa-arrow-up"></div>
+
     <!-- scripts -->
-    <script src="js/variables.js"></script>
-    <script src="js/index.js"></script>
+    <script src="/js/variables.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>

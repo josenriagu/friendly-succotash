@@ -4,7 +4,7 @@
 }
 
 #features {
-    padding: 2rem 0;
+    // padding: 2rem 0;
 
     .features-box {
         .flexdisplay(row);
@@ -159,6 +159,33 @@
                 padding   : 1.5rem;
                 text-align: center;
             }
+        }
+    }
+}
+
+#cta {
+    text-align: center;
+
+    .cta-btn {
+        padding         : 2rem 2rem 1rem;
+        width           : 30%;
+        margin          : 0 auto;
+        background-color: fadeout(@white, 50%);
+        border-radius   : 1.5rem;
+        border-top      : .3rem solid @theme-bg;
+
+        @media @mobile,
+        @tablet,
+        @tabletmini {
+            width         : 70%;
+            padding-bottom: 2rem;
+        }
+
+        &:hover {
+            cursor          : pointer;
+            background-color: @white;
+            box-shadow      : 1rem 1rem 2rem @silver;
+            color           : @ahover;
         }
     }
 }
